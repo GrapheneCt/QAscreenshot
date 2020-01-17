@@ -2,7 +2,6 @@
 #include <vitasdk.h>
 
 static SceUID g_hooks[2];
-uint32_t text_addr, text_size, data_addr, data_size;
 
 void _start() __attribute__ ((weak, alias ("module_start")));
 
