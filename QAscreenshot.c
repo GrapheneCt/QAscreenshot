@@ -8,7 +8,7 @@ void _start() __attribute__ ((weak, alias ("module_start")));
 static tai_hook_ref_t ref_hook0;
 static int sceRegMgrGetKeyInt_patched(const char* category, const char* name, int* buf) {
 	int ret = TAI_CONTINUE(int, ref_hook0, category, name, buf);
-	if (strcmp(name, "debug_screenshot_format") == 0)
+	if (strcmp(name, "debug_screenshot_format") == 0 || strcmp(name, "debug_screenshot") == 0)
 	{
 		*buf = 1;
 		return 0;
