@@ -32,7 +32,7 @@ add_executable(QAscreenshot
 
 target_link_libraries(QAscreenshot
   taihen_stub
-  k
+  SceLibKernel_stub
 )
 
 set_target_properties(QAscreenshot
